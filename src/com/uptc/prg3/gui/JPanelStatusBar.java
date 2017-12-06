@@ -1,20 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.uptc.prg3.gui;
-
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-
-/**
- *
- * @author io
- */
 public class JPanelStatusBar extends JPanel{
+
+    private JLabel jLabelMessage;
+    
     public JPanelStatusBar(){
         super();
+        this.jLabelMessage = new JLabel("");
         init();
     }
-    private void init(){}
+    
+    private void init(){
+      this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+      this.add(jLabelMessage);
+    }
+    
+    public void setMessage(String message){
+       this.jLabelMessage.setText(message);
+    }
+            
+    
 }

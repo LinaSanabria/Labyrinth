@@ -18,10 +18,6 @@ public class Path {
     }
    
     public void show(Graphics2D graphics2D, double speed){
-        graphics2D.setColor(Color.BLACK);
-        for (int i = 0; i < positions.length; i++) {
-            graphics2D.drawString(""+i,(int)positions[i].getX(), (int)positions[i].getY());
-        }
         graphics2D.setColor(Color.RED);
         for (int i = 0; i < positions.length-1; i++) { // dibujar arista 
             Position position1 = positions[i];
